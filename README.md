@@ -1,4 +1,4 @@
-# movement_inventory
+# Music Festival Inventory App
 
 ## User Stories
 ### Initiation:
