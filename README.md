@@ -1,5 +1,9 @@
 # Music Festival Inventory App
 
+## Concept
+As part of the production team at Movement Music Festival - a nearly 3-decade old dance music (techno) festival - we track close to 500 pieces of backline (largely DJ) equipment. The software that the production team uses currently is outdated and the UI/UX is boring, horrible, and confusing, not to mention the sole developer no longer lives. There are also many holes in the process that, if filled, will streamline the **initiation**, **planning**, and **execution** parts of backline management. Fed up with the old, we opted to make our own. Not only do we want to clean up the functionality, but we also want to expand the usability as to make EVERYONE'S lives easier, from artist managers to stage managers to the production compound crew. There are many elements to this project and it will continue to grow in functionality for many years to come!
+
+
 ## User Stories
 ### Initiation:
 01. As as **artist manager**, I can create a unique login for myself. 
