@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+    const [ barcodeText, setBarcodeText ] = useState("")
+    const [ barcode, setBarcode ] = useState(null)
+
+    const handleChange = e => {
+        setBarcodeText( e.target.value )
+        console.log(barcodeText)
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        console.log("I have been submitted!!")
+    }
+
+    return (
+        <form>
+            <input 
+                type="text" 
+                name="barcode" 
+                value={barcodeText} 
+                onChange={handleChange} 
+                onSubmit={handleSubmit}
+            />
+        </form>
+    )
 }
 
-export default App;
+export default App
