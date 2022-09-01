@@ -21,3 +21,10 @@ As part of the production team at Movement Music Festival - a nearly 3-decade ol
 ### Execution:
 01. As a **production coordinator**, I can create stage owner “profiles” that include the following fields: stage name, stage manager name, phone number, email, intern name, intern phone number.
 02. As a **production coordinator**, I can create tickets to initiate a transaction that is linked to a specific stage owner. Ticket fields include: Check in date & time, check out day & time, misc notes. 
+
+
+## V.1 MVP
+01. "Artist managers" can submit a necessary backline form for each artist. Submitted info can be viewed ticket by ticket with admin credentials. 
+02. Be able to manually enter in each piece of backline inventory, and then it displays in an organized chart below. 
+03. Be able to create a profile for each stage/stage manager with appropriate contact information. 
+04. Be able to check out gear from the library and assign it to a given stage. Be able to view what gear is at each stage. 
