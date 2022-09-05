@@ -1,30 +1,27 @@
 import React, { useState } from "react";
+import { 
+    Routes, 
+    Route, 
+    Link 
+} from "react-router-dom";
+import NavBar from "./Components/NavBar";
+import StageManagerProfiles from "./Components/StageMgmtProfiles";
+import BacklineLibrary from "./Components/BacklineLibrary";
+import ArtistManagerForm from "./Components/ArtistManagerForm";
 
 const App = () => {
 
-    const [ barcodeText, setBarcodeText ] = useState("")
-    const [ barcode, setBarcode ] = useState(null)
-
-    const handleChange = e => {
-        setBarcodeText( e.target.value )
-        console.log(barcodeText)
-    }
-
-    const handleSubmit = e => {
-        e.preventDefault()
-        console.log("I have been submitted!!")
-    }
 
     return (
-        <form>
-            <input 
-                type="text" 
-                name="barcode" 
-                value={barcodeText} 
-                onChange={handleChange} 
-                onSubmit={handleSubmit}
-            />
-        </form>
+        <div>
+            <NavBar />
+            <Routes>
+                <Route path="/ManagerForm" element={ <ArtistManagerForm /> }/>
+                <Route path="/BacklineLibrary" element={ <BacklineLibrary /> }/>
+                <Route path="/StageMgrProfiles" element={ <StageManagerProfiles />}/>
+            </Routes>
+        </div>
+        
     )
 }
 
