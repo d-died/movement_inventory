@@ -1,12 +1,21 @@
 .navbar{
+    position: fixed;
     display: flex;
     justify-content: flex-end;
     height: 60px;
-    border: 2px black solid;
+    width: 100%;
+    border-bottom: 2px black solid;
 }
 
-#links-container{
-    width: 60%;
+.app-name{
+    position: absolute;
+    font-size: 2em;
+    left: 10px;
+    top: 10px;
+}
+
+.nav-menu{
+    width: 1000px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -14,7 +23,7 @@
 
 .navitem{
     color: #000;
-    font-size: 1.5vw;
+    font-size: 1.5em;
     text-decoration: none;
     margin: 0 2%;
 }
@@ -22,3 +31,81 @@
 .navitem:hover{
     color: #940;
 }
+
+.sticky {
+    position: sticky;
+    top: 0;
+    margin-right: 0;
+    z-index: 10;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        color: rgb(0, 0, 0);
+        top: 50px;
+        right: 15px;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+    
+    .menu-dashes {
+        margin: -20px 0 -20px 0;
+        transition: all 50ms;
+    }
+    
+    .menu-dashes-angle1{
+        position: absolute;
+        transform: rotate(225deg);
+        top: -15px;
+        right: 0px;
+        margin: -20px 0 -20px 0;
+        transition: all 500ms;
+    }
+    
+    .menu-dashes-angle2{
+        position: absolute;
+        transform: rotate(-225deg);
+        top: -15px;
+        right: 0px;
+        transition: all 500ms;
+        margin: -20px 0 -20px 0;
+        filter: opacity(.6);
+    }
+
+    .nav-menu{
+        height: 0px;
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        overflow: hidden;
+    }
+
+    .nav-menu.active {
+        height: 135px;
+        width: 100%;
+        background-color: white;
+        top: 60px;
+        border-bottom: black 2px solid;
+        transition: height 500ms ease;
+      }
+
+      .navitem{
+        margin-left: 15px;
+        top: 5px;
+        font-size: 25px;
+      }
+
+      .active {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+    }
+}
+
