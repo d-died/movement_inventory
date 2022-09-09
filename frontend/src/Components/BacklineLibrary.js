@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './BacklineLibrary.css'
 
 const BacklineLibrary = () => {
 
@@ -16,7 +17,7 @@ const BacklineLibrary = () => {
     }
 
     return (
-        <div>
+        <div className='backline-container'>
             Backline Library
              <form>
                 <input 

@@ -1,10 +1,11 @@
 import React from "react";
+import './StageMgmtProfiles.css'
 
 
 const StageManagerProfiles = () => {
 
     return (
-        <div>
+        <div className="mgmt-prof-container">
             Stage Manager Profiles
         </div>
     )
