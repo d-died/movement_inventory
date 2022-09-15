@@ -13,84 +13,82 @@ const StageManagerProfiles = () => {
         internCell: ""
     })
 
-    const handleStageChange = e => {
-        setFormValues({...formValues, stageName: e.target.value })
+    const [ submitted, setSubmitted ] = useState(false)
+    const [ valid, setValid ] = useState(false)
+
+    const handleAllFormChanges = e => {
+        const value = e.target.value
+        setFormValues({ ...formValues, [e.target.name]: value })
     }
 
-    const handleManagerChange = e => {
-        setFormValues({...formValues, stageManager: e.target.value })
+    const handleFormSubmit = e => {
+        const v = formValues
+        e.preventDefault()
+        if(v.stageName && v.stageManager && v.managerCell){
+            setValid(true)
+        }
+        setSubmitted(true)
+        console.log(formValues)
     }
-
-
-    const handleManagerCellChange = e => {
-        setFormValues({...formValues, managerCell: e.target.value })
-    }
-
-
-    const handleManagerEmailChange = e => {
-        setFormValues({...formValues, managerEmail: e.target.value })
-    }
-
-
-    const handleInternChange = e => {
-        setFormValues({...formValues, internName: e.target.value })
-    }
-
-
-    const handleInternCellChange = e => {
-        setFormValues({...formValues, internCell: e.target.value })
-    }
-
 
 
     return (
         <div className="mgmt-prof-container">
             <h1>Stage Manager Profiles</h1>
             <div className="form-container">
-                <form>
+                <form onSubmit={ handleFormSubmit }>
+                    { submitted && valid ? <div className="success-message">Stage Profile has been submitted!</div> : null }
                     <label>Stage Name:
                         <input
                             value={ formValues.stageName }
                             placeholder="Stage Name"
                             name="stageName"
-                            onChange={ handleStageChange } />
+                            onChange={ handleAllFormChanges } />
+                        { submitted && !formValues.stageName ? <span>This field is required.</span> : null }
                     </label>
                     <label>Stage Manager Name:
                         <input 
                             value={ formValues.stageManager }
                             placeholder="Manager Name"
                             name="stageManager"
-                            onChange={ handleManagerChange } />
+                            onChange={ handleAllFormChanges } />
+                        { submitted && !formValues.stageManager ? <span>This field is required.</span> : null }
                     </label>
                     <label>Stage Manager Cell:
                         <input
                             value={ formValues.managerCell }
                             placeholder="Manager Cell"
                             name="managerCell"
-                            onChange={ handleManagerCellChange } />
+                            onChange={ handleAllFormChanges } />
+                        { submitted && !formValues.managerCell ? <span>This field is required.</span> : null }
                     </label>
                     <label>Stage Manager Email:
                         <input
                             value={ formValues.managerEmail }
                             placeholder="Manager Email"
                             name="managerEmail"
-                            onChange={ handleManagerEmailChange } />
+                            onChange={ handleAllFormChanges } />
+                        { submitted && !formValues.managerEmail ? <span>Please complete this field.</span> : null }
                     </label>
                     <label>Intern Name:
                         <input
                             value={ formValues.internName }
                             placeholder="Intern Name"
                             name="internName"
-                            onChange={ handleInternChange } />
+                            onChange={ handleAllFormChanges } />
+                        { submitted && !formValues.internName ? <span>Please complete this field.</span> : null }
                     </label>
                     <label>Intern Cell:
                         <input
                             value={ formValues.internCell }
                             placeholder="Intern Cell"
                             name="internCell"
-                            onChange={ handleInternCellChange } />
+                            onChange={ handleAllFormChanges } />
+                        { submitted && !formValues.internCell ? <span>Please complete this field.</span> : null }
                     </label>
-                    <input type="submit"/>
+                    <input 
+                        type="submit"
+                        onSubmit={ handleFormSubmit } />
                 </form>
             </div>
         </div>

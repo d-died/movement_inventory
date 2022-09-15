@@ -30,3 +30,11 @@ label {
     flex-direction: row;
 }
 
+.success-message {
+    color:rgb(130, 207, 207)
+}
+
+span {
+    color: rgb(238, 126, 126)
+}
+
