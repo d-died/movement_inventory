@@ -26,9 +26,16 @@ const StageManagerProfiles = () => {
         e.preventDefault()
         if(v.stageName && v.stageManager && v.managerCell){
             setValid(true)
+            setSubmitted(true)
+            setFormValues({
+                stageName: "",
+                stageManager: "",
+                managerCell: "",
+                managerEmail: "",
+                internName: "",
+                internCell: ""
+            })
         }
-        setSubmitted(true)
-        console.log(formValues)
     }
 
 
