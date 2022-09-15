@@ -1,3 +1,32 @@
 .mgmt-prof-container{
+    display: flex;
+    flex-direction: column;
     padding-top: 65px;
+    background-color: rgb(191, 160, 220);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
+
+.form-container{
+    border: 10px;
+    border-color: black;
+    border-radius: 15px;
+    border-style: outset;
+    border: 10px ;
+    margin: 50px 50px;
+    background-color: rgb(102, 135, 102);
+    padding: 30px;
+}
+
+input {
+    margin: 5px 5px 5px 5px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+label {
+    flex-direction: row;
+}
+
