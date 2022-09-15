@@ -16,7 +16,7 @@ const NavBar = () => {
                 <i className={click ? "fas fa-dash menu-dashes-angle2" : "fas fa-dash menu-dashes"}/>
             </div>
             <div className='app-name'>
-                App Name
+                BTS
             </div>
             <div className={click ? "nav-menu active": "nav-menu"}>
                 <Link to="/" className="navitem" onClick={closeMenu}>BTS</Link>
