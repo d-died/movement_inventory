@@ -15,11 +15,12 @@ const NavBar = () => {
                 <i className={click ? "fas fa-dash menu-dashes-angle2" : "fas fa-dash menu-dashes"}/>
                 <i className={click ? "fas fa-dash menu-dashes-angle2" : "fas fa-dash menu-dashes"}/>
             </div>
-            <div className='app-name'>
-                BTS
+            <div>
+                <Link to="/" className='app-name'>
+                    BTS
+                </Link>
             </div>
             <div className={click ? "nav-menu active": "nav-menu"}>
-                <Link to="/" className="navitem" onClick={closeMenu}>BTS</Link>
                 <Link to="/ManagerForm" className="navitem" onClick={closeMenu}>Arist Manager Form</Link>
                 <Link to="/BacklineLibrary" className="navitem" onClick={closeMenu}>Backline Library</Link>
                 <Link to="/StageMgrProfiles" className="navitem" onClick={closeMenu}>Stage Manager Profiles</Link>
