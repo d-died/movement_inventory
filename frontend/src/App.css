@@ -6,3 +6,7 @@
 .navitem {
     margin: 200px
 }
+
+@media screen and (max-width: 780px) {
+    
+}

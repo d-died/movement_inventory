@@ -1,6 +1,9 @@
-.backline-container{
+.home-page-container{
+    text-align: center;
     padding-top: 65px;
 }
+
+
 
 @media screen and (max-width: 780px) {
 
