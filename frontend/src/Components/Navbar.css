@@ -10,13 +10,19 @@
 
 .app-name{
     position: absolute;
-    font-size: 2em;
+    font-size: 3em;
+    text-decoration: none;
     left: 10px;
-    top: 10px;
+    top: 4px;
+    color: black;
+}
+
+.app-name:hover{
+    color: #940;
 }
 
 .nav-menu{
-    width: 1000px;
+    width: 700px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -44,7 +50,7 @@
     display: none;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 780px) {
     .menu-icon {
         display: flex;
         flex-direction: column;
