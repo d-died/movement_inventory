@@ -22,9 +22,8 @@ const StageManagerProfiles = () => {
     }
 
     const handleFormSubmit = e => {
-        const v = formValues
         e.preventDefault()
-        if(v.stageName && v.stageManager && v.managerCell){
+        if(formValues.stageName && formValues.stageManager && formValues.managerCell){
             setValid(true)
             setSubmitted(true)
             setFormValues({
