@@ -18,6 +18,7 @@ const StageManagerProfiles = () => {
     const [ submit, setSubmitted ] = useState(false)
 
     const handleAllFormChanges = e => {
+        setValid(false)
         const value = e.target.value
         setFormValues({ ...formValues, [e.target.name]: value })
     }
